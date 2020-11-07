@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style>
+    .preview {
+      width: 100%;
+      max-width: 1100px;
+      margin: 80px auto;
+      border: 1px dashed rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+
+    .preview::before {
+      content: 'WIDGET PREVIEW';
+      position: absolute;
+      display: block;
+      top: -18px;
+      font-size: 11px;
+      color: rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Embedded Widget Preview</h1>
+  <div data-widget-host="habitat" class="preview">
+    <script type="text/props">
+        { "recipeId": 1, "storeId": 1 }
+      </script>
+  </div>
+  <script src="/recipe-details.js" defer></script>
+</body>
+
+</html>

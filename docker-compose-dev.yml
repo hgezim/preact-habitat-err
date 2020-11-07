@@ -1,0 +1,14 @@
+version: '3'
+
+# use lb_lbnet network created by the load balancer repo (lb)
+networks:
+  default:
+    external:
+      name: lb_lbnet
+
+services:
+  shopper-ui-embedded:
+    tty: true
+    command: bash -c 'npm install && npm run dev'
+    volumes:
+      - ./node_modules:/usr/src/shopper-ui-embedded/node_modules

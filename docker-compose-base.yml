@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  shopper-ui-embedded:
+    command: bash -c 'npm run dev'
+    container_name: shopper-ui-embedded
+    ports:
+      - '2900:2900'
+    build: .
+    volumes:
+      - .:/usr/src/shopper-ui-embedded

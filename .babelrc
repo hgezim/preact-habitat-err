@@ -1,0 +1,9 @@
+{
+  "presets": [["preact-cli/babel", { "modules": "commonjs" }]],
+  "plugins": [["styled-jsx/babel"]],
+  "env": {
+    "test": {
+      "presets": [["preact-cli/babel", { "modules": "commonjs" }]]
+    }
+  }
+}
